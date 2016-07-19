@@ -14,15 +14,15 @@
 
  function pi_class_one_callback($post,$box){
      wp_nonce_field( basename( __FILE__ ), 'pi_nonce' );
-     var_dump (get_post_meta( $post->ID, 'pi-class-one', true ));
+    //  var_dump (get_post_meta( $post->ID, 'pi-class-one', true ));
      $stored_meta = get_post_meta($post->ID);
-     print_r($stored_meta);
+    //  print_r($stored_meta);
      ?>
 
      <p><?php echo esc_attr( get_post_meta( $post->ID, 'pi-class-one', true ) ); ?></p>
 
-     <hr>
      <p><label><input type="checkbox" name="meta-tabs" id="meta-tabs" value="1" <?php echo (isset($stored_meta['meta-tabs']) && $stored_meta['meta-tabs'][0] == 1) ? 'checked' : ''; ?> > Tabs</label></p>
+     <p><label><input type="checkbox" name="meta-fancybox" id="meta-fancybox" value="1" <?php echo (isset($stored_meta['meta-fancybox']) && $stored_meta['meta-fancybox'][0] == 1) ? 'checked' : ''; ?> > Fancybox</label></p>
 
      <?php
  }
@@ -43,6 +43,11 @@
         update_post_meta( $post_id, 'meta-tabs', 1 );
     }else{
         update_post_meta( $post_id, 'meta-tabs', 0 );
+    }
+    if( isset( $_POST[ 'meta-fancybox' ] )) {
+        update_post_meta( $post_id, 'meta-fancybox', 1 );
+    }else{
+        update_post_meta( $post_id, 'meta-fancybox', 0 );
     }
  }
 

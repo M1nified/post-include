@@ -1,0 +1,2 @@
+!function(a){a(function(){a("a[rel=group]").fancybox({transitionIn:"none",transitionOut:"none",titlePosition:"over",titleFormat:function(a,b,c){return'<span id="fancybox-title-over">Zdjęcie '+(c+1)+" / "+b.length+(a.length?" &nbsp; "+a:"")+"</span>"}})})}(jQuery);
+//# sourceMappingURL=fancybox.js.map
