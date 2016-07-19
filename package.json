@@ -1,0 +1,25 @@
+{
+  "name": "post-include",
+  "version": "1.0.0",
+  "description": "",
+  "main": "post-include.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M1nified/post-include.git"
+  },
+  "author": "M1nified",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M1nified/post-include/issues"
+  },
+  "homepage": "https://github.com/M1nified/post-include#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
