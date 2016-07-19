@@ -1,8 +1,8 @@
 'use strict';
 (function(jQuery){
 	function openTab(menu,id){
-		var i = jQuery(">ul>li>a",menu).index(jQuery("a[href=#"+id+"]"));
-		i = (i<0 || jQuery(">ul>li>a[href=#"+id+"]",menu).parent().hasClass("ui-state-active")) ? 0 : i;
+		var i = jQuery(">ul>li>a",menu).index(jQuery("a[href=\"#"+id+"\"]"));
+		i = (i<0 || jQuery(">ul>li>a[href=\"#"+id+"\"]",menu).parent().hasClass("ui-state-active")) ? 0 : i;
 		jQuery(menu).tabs("option", "active", i);
 		window.location.hash="!"+id;
 	}
