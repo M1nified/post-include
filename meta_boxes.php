@@ -23,6 +23,7 @@
 
      <p><label><input type="checkbox" name="meta-tabs" id="meta-tabs" value="1" <?php echo (isset($stored_meta['meta-tabs']) && $stored_meta['meta-tabs'][0] == 1) ? 'checked' : ''; ?> > Tabs</label></p>
      <p><label><input type="checkbox" name="meta-fancybox" id="meta-fancybox" value="1" <?php echo (isset($stored_meta['meta-fancybox']) && $stored_meta['meta-fancybox'][0] == 1) ? 'checked' : ''; ?> > Fancybox</label></p>
+     <p><label><input type="checkbox" name="meta-simplescroll" id="meta-simplescroll" value="1" <?php echo (isset($stored_meta['meta-simplescroll']) && $stored_meta['meta-simplescroll'][0] == 1) ? 'checked' : ''; ?> > Simplescroll (old floating)</label></p>
 
      <?php
  }
@@ -48,6 +49,11 @@
         update_post_meta( $post_id, 'meta-fancybox', 1 );
     }else{
         update_post_meta( $post_id, 'meta-fancybox', 0 );
+    }
+    if( isset( $_POST[ 'meta-simplescroll' ] )) {
+        update_post_meta( $post_id, 'meta-simplescroll', 1 );
+    }else{
+        update_post_meta( $post_id, 'meta-simplescroll', 0 );
     }
  }
 
